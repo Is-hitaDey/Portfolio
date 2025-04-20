@@ -1,12 +1,129 @@
-# React + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
 
-Currently, two official plugins are available:
+- [About Me](#about-me)
+- [What's Included](#whats-included)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running Locally](#running-locally)
+- [Key Features](#key-features)
+- [Technologies Used](#technologies-used)
+- [Contact](#contact)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About Me
 
-## Expanding the ESLint configuration
+Hi, I'm Ishita Dey, a Creative Web Developer passionate about building engaging and user-friendly digital experiences. Proficient in modern front-end technologies and experienced in deploying web applications. Also equipped with a strong foundation in programming and design principles.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## What's Included
+
+This repository contains the source code and assets for my portfolio website, including:
+
+- `index.html`: The main HTML file for the website.
+- `css/`: Directory containing CSS stylesheets for styling.
+- `js/`: Directory containing JavaScript files for interactivity.
+- `assets/`: Directory for images, fonts, and other static assets.
+- `components/` : Directory for reusable UI components .
+- `assets/` : Directory for pics used .
+- `README.md`: This file, providing information about the repository.
+
+
+## Getting Started
+
+Follow these instructions to get a local copy of the project up and running on your machine for development or personal viewing.
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Git:** [https://git-scm.com/downloads](https://git-scm.com/downloads)
+- **Node.js and npm** (if your portfolio uses a build process or server-side rendering): [https://nodejs.org/](https://nodejs.org/) (npm comes bundled with Node.js)
+- **A code editor** (e.g., VS Code, Sublime Text, Atom)
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/your-portfolio.git](https://github.com/your-username/your-portfolio.git)
+    ```
+    Replace `https://github.com/your-username/your-portfolio.git` with the actual URL of your repository.
+
+2.  **Navigate to the project directory:**
+    ```bash
+    cd your-portfolio
+    ```
+
+3.  **Install dependencies** :
+    ```bash
+    npm install gsap
+    # or
+    yarn install gsap
+    ```
+
+    ```bash
+    npm install gsap@react
+    # or
+    yarn install gsap@react
+    ```
+
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+### Running Locally
+
+The steps to run the portfolio locally depend on how it was built. Here are a few common scenarios:
+
+- **Static HTML/CSS/JS:** Simply open the `index.html` file in your web browser.
+
+- **With a development server (e.g., using npm scripts):**
+    If your `package.json` file has a `start` script, you can run:
+    ```bash
+    npm start
+    # or
+    yarn start
+    ```
+    This will usually start a local development server and open the portfolio in your browser. Check the `package.json` file for the specific command.
+
+- **Using React + Vite framework's CLI :**
+    Refer to the documentation of your chosen framework for instructions on running the development server. For example:
+    - **React + Vite:** `npm run dev` 
+
+## Key Features
+
+Highlight the main features and sections of your portfolio website. For example:
+
+- **Homepage:** A welcoming introduction and overview.
+- **About:** A more in-depth look at your background, interests, and philosophy.
+- **Skills:** A visual or listed representation of your technical and soft skills.
+- **Education** Shows the academic background of mine.
+- **Projects:** Detailed showcases of your projects with descriptions, technologies used, and links.
+- **Contact:** Ways for visitors to get in touch with you (e.g., contact form, email, social media links).
+- **Responsive Design:** Ensures the website looks great on various screen sizes.
+
+## Technologies Used
+
+List the primary technologies, frameworks, and libraries you used to build your portfolio.
+
+- HTML5
+- CSS3
+- JavaScript
+- Vite
+- [React](https://react.dev/) 
+- [GSAP (GreenSock Animation Platform)](https://greensock.com/) 
+
+## Contact
+
+- **Name:** Ishita Dey
+- **Email:** ishitadey.222@gmail.com
+- **LinkedIn:** [Your LinkedIn Profile URL]
+- **Twitter:** [Your Twitter Profile URL]
+<!-- - **Website:** [Your Portfolio URL] -->
+
+---
+
+Thank you for visiting my portfolio repository! I hope you enjoy exploring my work.

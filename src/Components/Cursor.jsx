@@ -7,7 +7,6 @@ export const Cursor = () => {
   useEffect(() => {
     const cursor = cursorRef.current;
     
-    // Basic cursor movement
     const moveCursor = (e) => {
       gsap.to(cursor, {
         x: e.clientX,
@@ -17,7 +16,6 @@ export const Cursor = () => {
       });
     };
     
-    // Function for hover effects
     const handleHoverEnter = () => {
       gsap.to(cursor, {
         scale: 2,
@@ -27,7 +25,6 @@ export const Cursor = () => {
       });
     };
     
-    // Function for hover end
     const handleHoverLeave = () => {
       gsap.to(cursor, {
         scale: 1,
@@ -37,15 +34,13 @@ export const Cursor = () => {
       });
     };
     
-    // Add the mousemove event listener
+  
     window.addEventListener('mousemove', moveCursor);
     
     // Store references to elements to clean up event listeners later
     const hoverElements = new Set();
     
-    // Function to add hover events to elements
     const addHoverEvents = () => {
-      // For Hero keyboard
       const keyboardEl = document.querySelector(".keyboard");
       if (keyboardEl && !hoverElements.has(keyboardEl)) {
         keyboardEl.addEventListener('mouseenter', handleHoverEnter);
@@ -53,7 +48,6 @@ export const Cursor = () => {
         hoverElements.add(keyboardEl);
       }
       
-      // For About workFrames
       const workFrames = document.querySelectorAll(".workFrame");
       workFrames.forEach(frame => {
         if (!hoverElements.has(frame)) {
@@ -63,7 +57,6 @@ export const Cursor = () => {
         }
       });
       
-      // For Skills categoryDesign
       const categoryDesigns = document.querySelectorAll(".categoryDesign");
       categoryDesigns.forEach(category => {
         if (!hoverElements.has(category)) {
@@ -72,9 +65,37 @@ export const Cursor = () => {
           hoverElements.add(category);
         }
       });
+
+      const qualifications = document.querySelectorAll(".passed");
+      qualifications.forEach(qualification => {
+        if (!hoverElements.has(qualification)) {
+          qualification.addEventListener('mouseenter', handleHoverEnter);
+          qualification.addEventListener('mouseleave', handleHoverLeave);
+          hoverElements.add(qualification);
+        }
+      });
+
+      const projectContainer = document.querySelectorAll(".projectContainer");
+      projectContainer.forEach(project => {
+        if (!hoverElements.has(project)) {
+          project.addEventListener('mouseenter', handleHoverEnter);
+          project.addEventListener('mouseleave', handleHoverLeave);
+          hoverElements.add(project);
+        }
+      });
+
+      const leftContainer = document.querySelectorAll(".leftContainer");
+      leftContainer.forEach(info => {
+        if (!hoverElements.has(info)) {
+          info.addEventListener('mouseenter', handleHoverEnter);
+          info.addEventListener('mouseleave', handleHoverLeave);
+          hoverElements.add(info);
+        }
+      });
     };
+
     
-    // Initially try to add events
+    
     addHoverEvents();
     
     // Create a mutation observer to watch for DOM changes
@@ -88,11 +109,10 @@ export const Cursor = () => {
       subtree: true 
     });
     
-    // Clean up event listeners on unmount
     return () => {
       window.removeEventListener('mousemove', moveCursor);
       
-      // Remove event listeners from all tracked elements
+
       hoverElements.forEach(element => {
         element.removeEventListener('mouseenter', handleHoverEnter);
         element.removeEventListener('mouseleave', handleHoverLeave);

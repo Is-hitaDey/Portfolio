@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-// Register ScrollTrigger plugin
+
 gsap.registerPlugin(ScrollTrigger);
 
 export const About = () => {
@@ -18,7 +18,7 @@ export const About = () => {
     const workDescsRef = useRef([]);
 
     useGSAP(() => {
-        // Hover animation for work frames
+
         workFrames.current.forEach((frame) => {
             gsap.set(frame, { boxShadow: 'none' });
             frame.addEventListener('mouseenter', () => {
@@ -29,7 +29,6 @@ export const About = () => {
             });
         });
 
-        // Reset initial states for all elements
         gsap.set(headingRef.current, { opacity: 0, y: 30 });
         gsap.set(stripRef.current, { opacity: 0, scaleX: 0.8 });
         gsap.set(aboutMeRef.current, { opacity: 0 });
@@ -39,12 +38,11 @@ export const About = () => {
         gsap.set(workPicsRef.current, { opacity: 0, scale: 0.8, rotation: -5 });
         gsap.set(workDescsRef.current, { opacity: 0, y: 20 });
 
-        // Heading animation
         ScrollTrigger.create({
             trigger: headingRef.current,
             start: "top 80%",
             end: "bottom top",
-            toggleActions: "play none none reverse", // play on enter, reverse on leave
+            toggleActions: "play none none reverse", 
             onEnter: () => {
                 gsap.to(headingRef.current, { 
                     opacity: 1, 
@@ -53,7 +51,6 @@ export const About = () => {
                     ease: "power3.out" 
                 });
                 
-                // Animate the "me" span separately for extra effect
                 gsap.to(".me", { 
                     color: "#ff79c6", 
                     duration: 0.5, 
@@ -69,7 +66,7 @@ export const About = () => {
             }
         });
 
-        // About strip animation
+   
         ScrollTrigger.create({
             trigger: stripRef.current,
             start: "top 80%",
@@ -86,15 +83,13 @@ export const About = () => {
             }
         });
 
-        // About me text animation with character reveal
-        // Try this simplified approach for the about me text animation
+
 ScrollTrigger.create({
     trigger: aboutMeRef.current,
-    start: "top 85%", // Adjust to trigger earlier
+    start: "top 85%", 
     end: "bottom top",
     toggleActions: "play none none reset",
     onEnter: () => {
-        // Simple fade-in animation for the whole text
         gsap.to(aboutMeRef.current, { 
             opacity: 1, 
             duration: 0.8,
@@ -104,7 +99,7 @@ ScrollTrigger.create({
     }
 });
 
-        // Works section animation - main container
+       
         ScrollTrigger.create({
             trigger: worksRef.current,
             start: "top 80%",
@@ -121,7 +116,6 @@ ScrollTrigger.create({
             }
         });
         
-        // Work frames animation
         ScrollTrigger.create({
             trigger: worksRef.current,
             start: "top 75%",
@@ -139,7 +133,6 @@ ScrollTrigger.create({
             }
         });
         
-        // Work titles animation
         ScrollTrigger.create({
             trigger: worksRef.current,
             start: "top 70%",
@@ -157,7 +150,6 @@ ScrollTrigger.create({
             }
         });
         
-        // Work images animation
         ScrollTrigger.create({
             trigger: worksRef.current,
             start: "top 65%",
@@ -176,7 +168,6 @@ ScrollTrigger.create({
             }
         });
         
-        // Work descriptions animation
         ScrollTrigger.create({
             trigger: worksRef.current,
             start: "top 60%",
@@ -194,7 +185,6 @@ ScrollTrigger.create({
             }
         });
         
-        // Optional: Add a reveal animation to the entire container
         gsap.set(aboutContainerRef.current, { 
             backgroundColor: "transparent"
         });
