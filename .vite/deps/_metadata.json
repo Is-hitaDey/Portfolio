@@ -1,0 +1,49 @@
+{
+  "hash": "dba4c5ad",
+  "configHash": "7e19c9ff",
+  "lockfileHash": "e11b87ad",
+  "browserHash": "ecea251d",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "f5a850b8",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "60b990af",
+      "needsInterop": true
+    },
+    "@gsap/react": {
+      "src": "../../node_modules/@gsap/react/src/index.js",
+      "file": "@gsap_react.js",
+      "fileHash": "631b0a77",
+      "needsInterop": false
+    },
+    "gsap": {
+      "src": "../../node_modules/gsap/index.js",
+      "file": "gsap.js",
+      "fileHash": "17c41a00",
+      "needsInterop": false
+    },
+    "gsap/ScrollTrigger": {
+      "src": "../../node_modules/gsap/ScrollTrigger.js",
+      "file": "gsap_ScrollTrigger.js",
+      "fileHash": "3f7a4439",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-PLLKX35O": {
+      "file": "chunk-PLLKX35O.js"
+    },
+    "chunk-KS2M7ZJI": {
+      "file": "chunk-KS2M7ZJI.js"
+    },
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
+    }
+  }
+}
