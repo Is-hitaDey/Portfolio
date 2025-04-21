@@ -45,13 +45,13 @@ Before you begin, ensure you have the following installed:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/your-portfolio.git](https://github.com/your-username/your-portfolio.git)
+    git clone [https://github.com/Is-hitaDey/Portfolio.git](https://github.com/Is-hitaDey/Portfolio.git)
     ```
-    Replace `https://github.com/your-username/your-portfolio.git` with the actual URL of your repository.
+    Replace `https://github.com/Is-hitaDey/Portfolio.git` with the actual URL of your repository.
 
 2.  **Navigate to the project directory:**
     ```bash
-    cd your-portfolio
+    cd Portfolio
     ```
 
 3.  **Install dependencies** :
@@ -76,18 +76,7 @@ Before you begin, ensure you have the following installed:
 
 ### Running Locally
 
-The steps to run the portfolio locally depend on how it was built. Here are a few common scenarios:
-
-- **Static HTML/CSS/JS:** Simply open the `index.html` file in your web browser.
-
-- **With a development server (e.g., using npm scripts):**
-    If your `package.json` file has a `start` script, you can run:
-    ```bash
-    npm start
-    # or
-    yarn start
-    ```
-    This will usually start a local development server and open the portfolio in your browser. Check the `package.json` file for the specific command.
+The steps to run the portfolio locally :
 
 - **Using React + Vite framework's CLI :**
     Refer to the documentation of your chosen framework for instructions on running the development server. For example:
