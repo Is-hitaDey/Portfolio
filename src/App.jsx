@@ -1,12 +1,13 @@
 import './App.css'
 import React from 'react'
-import { Hero } from './Components/Hero'
-import { About } from './Components/About'
-import { Skills } from './Components/Skills'
-import { Cursor } from './Components/Cursor'
-import { Education } from './Components/Education'
-import { Projects } from './Components/Projects'
-import { Contact } from './Components/Contact'
+import { Hero } from './components/Hero'
+import { About } from './components/About'
+import { Skills } from './components/Skills'
+import { Cursor } from './Components/Cursor.jsx'
+import { Education } from './Components/Education.jsx'
+import { Projects } from './components/Projects'
+import { Contact } from './Components/Contact.jsx'
+
 
 function App() {
 
