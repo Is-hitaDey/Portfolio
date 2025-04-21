@@ -24,54 +24,53 @@ export const Skills = () => {
         gsap.set(langItemsRefs.current, { opacity: 0, scale: 0.8, y: 20 });
 
         // Skills heading animation
-        // Skills heading animation
-ScrollTrigger.create({
-    trigger: skillsHeadingRef.current,
-    start: "top 80%",
-    end: "bottom top",
-    toggleActions: "play none none reverse",
-    onEnter: () => {
-        gsap.to(skillsHeadingRef.current, { 
-            opacity: 1, 
-            y: 0, 
-            duration: 0.8, 
-            ease: "power3.out" 
+        ScrollTrigger.create({
+            trigger: skillsHeadingRef.current,
+            start: "top 80%",
+            end: "bottom top",
+            toggleActions: "play none none reverse",
+            onEnter: () => {
+                gsap.to(skillsHeadingRef.current, { 
+                    opacity: 1, 
+                    y: 0, 
+                    duration: 0.8, 
+                    ease: "power3.out" 
+                });
+                
+                // Check if the line already exists
+                let line = skillsHeadingRef.current.querySelector('.heading-line');
+                
+                // Only create the line if it doesn't exist yet
+                if (!line) {
+                    line = document.createElement('div');
+                    line.className = 'heading-line'; // Add a class to identify it
+                    line.style.height = '3px';
+                    line.style.background = 'linear-gradient(90deg, transparent, #ff79c6, transparent)';
+                    line.style.width = '0%';
+                    line.style.margin = '10px auto';
+                    skillsHeadingRef.current.appendChild(line);
+                }
+                
+                // Animate the line (whether it's new or existing)
+                gsap.to(line, {
+                    width: '80%',
+                    duration: 1.2,
+                    delay: 0.3,
+                    ease: "power2.inOut"
+                });
+            },
+            onLeaveBack: () => {
+                // When scrolling back up, animate the line back to 0 width
+                const line = skillsHeadingRef.current.querySelector('.heading-line');
+                if (line) {
+                    gsap.to(line, {
+                        width: '0%',
+                        duration: 0.8,
+                        ease: "power2.inOut"
+                    });
+                }
+            }
         });
-        
-        // Check if the line already exists
-        let line = skillsHeadingRef.current.querySelector('.heading-line');
-        
-        // Only create the line if it doesn't exist yet
-        if (!line) {
-            line = document.createElement('div');
-            line.className = 'heading-line'; // Add a class to identify it
-            line.style.height = '3px';
-            line.style.background = 'linear-gradient(90deg, transparent, #ff79c6, transparent)';
-            line.style.width = '0%';
-            line.style.margin = '10px auto';
-            skillsHeadingRef.current.appendChild(line);
-        }
-        
-        // Animate the line (whether it's new or existing)
-        gsap.to(line, {
-            width: '80%',
-            duration: 1.2,
-            delay: 0.3,
-            ease: "power2.inOut"
-        });
-    },
-    onLeaveBack: () => {
-        // When scrolling back up, animate the line back to 0 width
-        const line = skillsHeadingRef.current.querySelector('.heading-line');
-        if (line) {
-            gsap.to(line, {
-                width: '0%',
-                duration: 0.8,
-                ease: "power2.inOut"
-            });
-        }
-    }
-});
 
         // Categories container animation
         ScrollTrigger.create({
@@ -217,7 +216,7 @@ ScrollTrigger.create({
 
     return (
         <>
-            <div className="page3">
+            <div id="skills" className="page3">
                 <div className="skillsContainer" ref={skillsContainerRef}>
                     <div className="skillsHeading" ref={skillsHeadingRef}>Skills</div>
                 </div>

@@ -39,7 +39,7 @@ export const Projects = () => {
 
     return (
         <>
-            <div className="projectsWrapper"> {/* Add this wrapper */}
+            <div id="projects" className="projectsWrapper">
                 <div className="page5">
                     <div className="projectHeading">Projects</div>
                     <div className="projectContainer">

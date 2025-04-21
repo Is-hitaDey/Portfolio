@@ -207,7 +207,7 @@ ScrollTrigger.create({
 
     return (
         <>
-            <div className="page2">
+            <div id="about" className="page2">
                 <div className="aboutContainer" ref={aboutContainerRef}>
                     <div className="aboutHeading" ref={headingRef}>Who<span className='me'>&nbsp;Am I &nbsp;</span> ?</div>
                     <div className="aboutStrip" ref={stripRef}>

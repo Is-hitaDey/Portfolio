@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import React, { useRef, useEffect } from 'react'
+import { Link } from 'react-scroll'
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -221,18 +222,18 @@ export const Hero = () => {
 
     return (
         <>
-            <div className="page1">
+            <div id="hero" className="page1">
                 <div className="fade">WELCOME TO MY PORTFOLIO!</div>
                 <div className="nav">
                     <div className="title">Portfolio</div>
                     <div className="contents">
                         <ul>
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Skills</li>
-                            <li>Education</li>
-                            <li>Projects</li>
-                            <li>Contact</li>
+                            <li><Link to="hero" smooth={true} duration={500}>Home</Link></li>
+                            <li><Link to="about" smooth={true} duration={500}>About</Link></li>
+                            <li><Link to="skills" smooth={true} duration={500}>Skills</Link></li>
+                            <li><Link to="education" smooth={true} duration={500}>Education</Link></li>
+                            <li><Link to="projects" smooth={true} duration={500}>Projects</Link></li>
+                            <li><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
                         </ul>
                     </div>
                 </div>

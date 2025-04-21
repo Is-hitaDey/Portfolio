@@ -107,7 +107,7 @@ export const Education = () => {
     
     return (
         <>
-            <div className="page4" ref={pageRef}>
+            <div id="education" className="page4">
                 <div className="educationContainer">
                     <div className="educationHeading" ref={headingRef}>Education</div>
                     <div className="qualifications">
