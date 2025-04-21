@@ -218,7 +218,7 @@ ScrollTrigger.create({
                             <div className="workTitle" ref={(el) => workTitlesRef.current[0] = el}>UI/UX Design</div>
                             <div className="workInfo">
                                 <div className="workPic" ref={(el) => workPicsRef.current[0] = el}>
-                                    <img src="src/assets/web-design.png" alt="UI/UX" />
+                                    <img src="/web-design.png" alt="UI/UX" />
                                 </div>
                                 <div className="workDesc" ref={(el) => workDescsRef.current[0] = el}>Focused on creating intuitive and engaging digital experiences. I blend user understanding with visual design to craft seamless interfaces that solve problems and achieve goals.</div>
                             </div>
@@ -227,7 +227,7 @@ ScrollTrigger.create({
                             <div className="workTitle" ref={(el) => workTitlesRef.current[1] = el}>Web Development</div>
                             <div className="workInfo">
                                 <div className="workPic" ref={(el) => workPicsRef.current[1] = el}>
-                                    <img src="src/assets/coding.png" alt="code" />
+                                    <img src="/coding.png" alt="code" />
                                 </div>
                                 <div className="workDesc" ref={(el) => workDescsRef.current[1] = el}>Focused on crafting engaging and user-friendly digital experiences. I specialize in building visually appealing and interactive interfaces using modern web technologies.</div>
                             </div>

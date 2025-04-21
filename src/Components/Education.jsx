@@ -113,7 +113,7 @@ export const Education = () => {
                     <div className="qualifications">
                         <div className="passed" ref={addToRefs}>
                             <div className="qualificationPic">
-                                <img src="src/assets/NSEC.jpg" alt="NSEC" />
+                                <img src="/NSEC.jpg" alt="NSEC" />
                             </div>
                             <div className="division">
                                 <div className="circle"></div>
@@ -128,7 +128,7 @@ export const Education = () => {
                         </div>
                         <div className="passed" ref={addToRefs}>
                             <div className="qualificationPic">
-                                <img src="src/assets/DAV.jpg" alt="DAV" />
+                                <img src="/DAV.jpg" alt="DAV" />
                             </div>
                             <div className="division">
                                 <div className="circle"></div>

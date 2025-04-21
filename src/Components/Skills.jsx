@@ -226,19 +226,19 @@ export const Skills = () => {
                         <div className="langContainer">
                             <div className="langItems" ref={el => langItemsRefs.current[0] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/letter-c.png" alt="C Language" />
+                                    <img src="/letter-c.png" alt="C Language" />
                                 </div>
                                 <div className="langName">C</div>
                             </div>
                             <div className="langItems" ref={el => langItemsRefs.current[1] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/c-.png" alt="C++" />
+                                    <img src="/c-.png" alt="C++" />
                                 </div>
                                 <div className="langName">C++</div>
                             </div>
                             <div className="langItems" ref={el => langItemsRefs.current[2] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/python.png" alt="Python" />
+                                    <img src="/python.png" alt="Python" />
                                 </div>
                                 <div className="langName">Python</div>
                             </div>
@@ -249,49 +249,49 @@ export const Skills = () => {
                         <div className="langContainer">
                             <div className="langItems" ref={el => langItemsRefs.current[3] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/html.png" alt="html" />
+                                    <img src="/html.png" alt="html" />
                                 </div>
                                 <div className="langName">HTML</div>
                             </div>
                             <div className="langItems" ref={el => langItemsRefs.current[4] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/css-3.png" alt="css" />
+                                    <img src="/css-3.png" alt="css" />
                                 </div>
                                 <div className="langName">CSS</div>
                             </div>
                             <div className="langItems" ref={el => langItemsRefs.current[5] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/js.png" alt="js" />
+                                    <img src="/js.png" alt="js" />
                                 </div>
                                 <div className="langName">JavaScript</div>
                             </div>
                             <div className="langItems" ref={el => langItemsRefs.current[6] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/Tailwind CSS.png" alt="tailwind css" />
+                                    <img src="/Tailwind CSS.png" alt="tailwind css" />
                                 </div>
                                 <div className="langName">Tailwind CSS</div>
                             </div>
                             <div className="langItems" ref={el => langItemsRefs.current[7] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/react.png" alt="react" />
+                                    <img src="/react.png" alt="react" />
                                 </div>
                                 <div className="langName">React JS</div>
                             </div>
                             <div className="langItems" ref={el => langItemsRefs.current[8] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/gsap.png" alt="gsap" />
+                                    <img src="/gsap.png" alt="gsap" />
                                 </div>
                                 <div className="langName">GSAP</div>
                             </div>
                             <div className="langItems" ref={el => langItemsRefs.current[9] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/node.png" alt="node" />
+                                    <img src="/node.png" alt="node" />
                                 </div>
                                 <div className="langName">Node JS</div>
                             </div>
                             <div className="langItems" ref={el => langItemsRefs.current[10] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/bootstrap.png" alt="Bootstrap" />
+                                    <img src="/bootstrap.png" alt="Bootstrap" />
                                 </div>
                                 <div className="langName">BootStrap</div>
                             </div>
@@ -303,37 +303,37 @@ export const Skills = () => {
                         <div className="langContainer">
                             <div className="langItems" ref={el => langItemsRefs.current[11] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/canva.svg" alt="canva" />
+                                    <img src="/canva.svg" alt="canva" />
                                 </div>
                                 <div className="langName">Canva</div>
                             </div>
                             <div className="langItems" ref={el => langItemsRefs.current[12] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/git.png" alt="git" />
+                                    <img src="/git.png" alt="git" />
                                 </div>
                                 <div className="langName">Git</div>
                             </div>
                             <div className="langItems" ref={el => langItemsRefs.current[13] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/github.png" alt="github" />
+                                    <img src="/github.png" alt="github" />
                                 </div>
                                 <div className="langName">GitHub</div>
                             </div>
                             <div className="langItems" ref={el => langItemsRefs.current[14] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/netlify.svg" alt="netlify" />
+                                    <img src="/netlify.svg" alt="netlify" />
                                 </div>
                                 <div className="langName">Netlify</div>
                             </div>
                             <div className="langItems" ref={el => langItemsRefs.current[15] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/vercel.svg" alt="vercel" />
+                                    <img src="/vercel.svg" alt="vercel" />
                                 </div>
                                 <div className="langName">Vercel</div>
                             </div>
                             <div className="langItems" ref={el => langItemsRefs.current[16] = el}>
                                 <div className="langPic">
-                                    <img src="src/assets/hostinger.svg" alt="hostinger" />
+                                    <img src="/hostinger.svg" alt="hostinger" />
                                 </div>
                                 <div className="langName">Hostinger</div>
                             </div>

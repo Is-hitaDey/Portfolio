@@ -46,10 +46,10 @@ export const Projects = () => {
                         <div className="project spotify">
                             <div className="projectPic">
                                 <div className="pic3">
-                                    <img src="src/assets/spotify1.png" alt="pic1" />
+                                    <img src="/spotify1.png" alt="pic1" />
                                 </div>
                                 <div className="pic4">
-                                    <img src="src/assets/spotify2.png" alt="pic2" />
+                                    <img src="/spotify2.png" alt="pic2" />
                                 </div>
                             </div>
                             <div className="projectDetails">
@@ -62,16 +62,16 @@ export const Projects = () => {
                         <div className="project foodtopia">
                             <div className="projectPic">
                                 <div className="pic2">
-                                    <img src="src/assets/foodtopia4.png" alt="page1" />
+                                    <img src="/foodtopia4.png" alt="page1" />
                                 </div>
                                 <div className="pic2">
-                                    <img src="src/assets/foodtopia3.png" alt="page2" />
+                                    <img src="/foodtopia3.png" alt="page2" />
                                 </div>
                                 <div className="pic2">
-                                    <img src="src/assets/foodtopia2.png" alt="page3" />
+                                    <img src="/foodtopia2.png" alt="page3" />
                                 </div>
                                 <div className="pic2">
-                                    <img src="src/assets/foodtopia1.png" alt="page4" />
+                                    <img src="/foodtopia1.png" alt="page4" />
                                 </div>
                             </div>
                             <div className="projectDetails">
@@ -84,10 +84,10 @@ export const Projects = () => {
                         <div className="project weather">
                             <div className="projectPic">
                                 <div className="pic1">
-                                    <img src="src/assets/weather1.png" alt="page1" />
+                                    <img src="/weather1.png" alt="page1" />
                                 </div>
                                 <div className="pic1">
-                                    <img src="src/assets/weather2.png" alt="page2" />
+                                    <img src="/weather2.png" alt="page2" />
                                 </div>
                             </div>
                             <div className="projectDetails">

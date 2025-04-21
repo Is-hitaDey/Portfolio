@@ -12,7 +12,7 @@ export const Contact = () => {
     if (entriesRef.current[0]) {
       const icon = document.querySelector(".insta img");
       const originalIcon = icon.src
-      const hoverIcon = "src/assets/insta-h.png"
+      const hoverIcon = "/insta-h.png"
 
       icon.addEventListener("mouseover", () => {
         icon.src = hoverIcon
@@ -26,7 +26,7 @@ export const Contact = () => {
     if (entriesRef.current[1]) {
       const icon = document.querySelector(".linked img");
       const originalIcon = icon.src
-      const hoverIcon = "src/assets/linkedin-hover.png"
+      const hoverIcon = "/linkedin-hover.png"
 
       icon.addEventListener("mouseover", () => {
         icon.src = hoverIcon
@@ -40,7 +40,7 @@ export const Contact = () => {
     if (entriesRef.current[2]) {
       const icon = document.querySelector(".git img");
       const originalIcon = icon.src
-      const hoverIcon = "src/assets/git-hover.png"
+      const hoverIcon = "/git-hover.png"
 
       icon.addEventListener("mouseover", () => {
         icon.src = hoverIcon
@@ -54,7 +54,7 @@ export const Contact = () => {
     if (entriesRef.current[3]) {
       const icon = document.querySelector(".twitter img");
       const originalIcon = icon.src
-      const hoverIcon = "src/assets/twitter-hover.png"
+      const hoverIcon = "/twitter-hover.png"
 
       icon.addEventListener("mouseover", () => {
         icon.src = hoverIcon
@@ -133,7 +133,7 @@ export const Contact = () => {
           <div className="leftContainer">
             <div className="picContainer">
               <div className="myPic">
-                <img src="src/assets/mypic.jpg" alt="mypic" />
+                <img src="/mypic.jpg" alt="mypic" />
               </div>
             </div>
             <div className="contactInfo">
@@ -148,22 +148,22 @@ export const Contact = () => {
               <div className="social">
                 <div className="insta media" ref={addToRefs}>
                   <a href="https://www.instagram.com/_corevibes/?hl=en">
-                    <img src="src/assets/instagram.png" alt="insta" />
+                    <img src="/instagram.png" alt="insta" />
                   </a>
                 </div>
                 <div className="linked media" ref={addToRefs}>
                   <a href="https://www.linkedin.com/in/deyishita">
-                    <img src="src/assets/linkedin.png" alt="linkedin" />
+                    <img src="/linkedin.png" alt="linkedin" />
                   </a>
                 </div>
                 <div className="git media" ref={addToRefs}>
                   <a href="https://github.com/Is-hitaDey">
-                    <img src="src/assets/git-icon.png" alt="github" />
+                    <img src="/git-icon.png" alt="github" />
                   </a>
                 </div>
                 <div className="twitter media" ref={addToRefs}>
                   <a href="https://x.com/222Ishitadey">
-                    <img src="src/assets/twitter.png" alt="twitter" />
+                    <img src="/twitter.png" alt="twitter" />
                   </a>
                 </div>
               </div>

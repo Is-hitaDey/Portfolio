@@ -48,7 +48,7 @@ a:hover ~ .cursor, button:hover ~ .cursor {
   align-items: center;
   font-size: 10vh;
   font-weight: 800;
-  background-image: url(src/assets/text-pic.avif);
+  background-image: url(/text-pic.avif);
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -66,7 +66,7 @@ a:hover ~ .cursor, button:hover ~ .cursor {
 .title{
   font-size:3rem;
   font-weight:800;
-  background-image: url(src/assets/titlePic.avif);
+  background-image: url(/titlePic.avif);
   object-fit: cover;
   -webkit-text-fill-color: transparent;
   background-clip: text;
