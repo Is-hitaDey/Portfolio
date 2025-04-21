@@ -4,9 +4,11 @@ import React, { useEffect, useRef, useState } from 'react'
 
 export const Contact = () => {
   const entriesRef = useRef([])
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-
     if (entriesRef.current[0]) {
       const icon = document.querySelector(".insta img");
       const originalIcon = icon.src
@@ -62,8 +64,7 @@ export const Contact = () => {
         icon.src = originalIcon
       })
     }
-
-  })
+  }, [])
 
   const [formData, setFormData] = useState({
     username: '',
@@ -80,10 +81,42 @@ export const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add your form submission logic here
+    setIsLoading(true);
+    setError(null);
+    
+    try {
+      
+      
+      // Option 2: Store data in localStorage (for demonstration purposes)
+      localStorage.setItem('contactFormData', JSON.stringify(formData));
+      
+      // Option 3: Simple console log (as in your original code)
+      console.log('Form submitted:', formData);
+      
+      // Show success message
+      setIsSubmitted(true);
+      
+      // Reset form after successful submission
+      setFormData({
+        username: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 5000);
+      
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setError('Failed to submit form. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const addToRefs = (el) => {
@@ -119,7 +152,7 @@ export const Contact = () => {
                   </a>
                 </div>
                 <div className="linked media" ref={addToRefs}>
-                  <a href="www.linkedin.com/in/deyishita">
+                  <a href="https://www.linkedin.com/in/deyishita">
                     <img src="src/assets/linkedin.png" alt="linkedin" />
                   </a>
                 </div>
@@ -138,6 +171,18 @@ export const Contact = () => {
           </div>
           <div className="rightContainer">
             <div className="form">
+              {isSubmitted && (
+                <div className="success-message" style={{color: 'green', marginBottom: '15px', padding: '10px', backgroundColor: '#e8f5e9', borderRadius: '4px'}}>
+                  Thank you for your message! I'll get back to you soon.
+                </div>
+              )}
+              
+              {error && (
+                <div className="error-message" style={{color: 'red', marginBottom: '15px', padding: '10px', backgroundColor: '#ffebee', borderRadius: '4px'}}>
+                  {error}
+                </div>
+              )}
+              
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="username">Name</label>
@@ -190,8 +235,22 @@ export const Contact = () => {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="submit-btn">Send Message</button>
+                <button 
+                  type="submit" 
+                  className="submit-btn"
+                  disabled={isLoading}
+                >
+                  {isLoading ? 'Sending...' : 'Send Message'}
+                </button>
               </form>
+              
+              {/* Optional: Display the submitted data */}
+              {false && localStorage.getItem('contactFormData') && (
+                <div className="submitted-data" style={{marginTop: '20px', padding: '15px', backgroundColor: '#f5f5f5', borderRadius: '4px'}}>
+                  <h4>Last Submitted Data:</h4>
+                  <pre>{localStorage.getItem('contactFormData')}</pre>
+                </div>
+              )}
             </div>
           </div>
         </div>
