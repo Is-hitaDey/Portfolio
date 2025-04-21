@@ -4,62 +4,62 @@ import React, { useEffect, useRef, useState } from 'react'
 
 export const Contact = () => {
   const entriesRef = useRef([])
-  
-  useEffect(()=>{
 
-    if (entriesRef.current[0]){
-      const icon=document.querySelector(".insta img");
-      const originalIcon=icon.src
-      const hoverIcon= "src/assets/insta-h.png"
+  useEffect(() => {
 
-      icon.addEventListener("mouseover",()=>{
-        icon.src=hoverIcon
+    if (entriesRef.current[0]) {
+      const icon = document.querySelector(".insta img");
+      const originalIcon = icon.src
+      const hoverIcon = "src/assets/insta-h.png"
+
+      icon.addEventListener("mouseover", () => {
+        icon.src = hoverIcon
       })
 
-      icon.addEventListener("mouseout",()=>{
-        icon.src=originalIcon
-      })
-    }
-
-    if (entriesRef.current[1]){
-      const icon=document.querySelector(".linked img");
-      const originalIcon=icon.src
-      const hoverIcon= "src/assets/linkedin-hover.png"
-
-      icon.addEventListener("mouseover",()=>{
-        icon.src=hoverIcon
-      })
-
-      icon.addEventListener("mouseout",()=>{
-        icon.src=originalIcon
+      icon.addEventListener("mouseout", () => {
+        icon.src = originalIcon
       })
     }
 
-    if (entriesRef.current[2]){
-      const icon=document.querySelector(".git img");
-      const originalIcon=icon.src
-      const hoverIcon= "src/assets/git-hover.png"
+    if (entriesRef.current[1]) {
+      const icon = document.querySelector(".linked img");
+      const originalIcon = icon.src
+      const hoverIcon = "src/assets/linkedin-hover.png"
 
-      icon.addEventListener("mouseover",()=>{
-        icon.src=hoverIcon
+      icon.addEventListener("mouseover", () => {
+        icon.src = hoverIcon
       })
 
-      icon.addEventListener("mouseout",()=>{
-        icon.src=originalIcon
+      icon.addEventListener("mouseout", () => {
+        icon.src = originalIcon
       })
     }
 
-    if (entriesRef.current[3]){
-      const icon=document.querySelector(".twitter img");
-      const originalIcon=icon.src
-      const hoverIcon= "src/assets/twitter-hover.png"
+    if (entriesRef.current[2]) {
+      const icon = document.querySelector(".git img");
+      const originalIcon = icon.src
+      const hoverIcon = "src/assets/git-hover.png"
 
-      icon.addEventListener("mouseover",()=>{
-        icon.src=hoverIcon
+      icon.addEventListener("mouseover", () => {
+        icon.src = hoverIcon
       })
 
-      icon.addEventListener("mouseout",()=>{
-        icon.src=originalIcon
+      icon.addEventListener("mouseout", () => {
+        icon.src = originalIcon
+      })
+    }
+
+    if (entriesRef.current[3]) {
+      const icon = document.querySelector(".twitter img");
+      const originalIcon = icon.src
+      const hoverIcon = "src/assets/twitter-hover.png"
+
+      icon.addEventListener("mouseover", () => {
+        icon.src = hoverIcon
+      })
+
+      icon.addEventListener("mouseout", () => {
+        icon.src = originalIcon
       })
     }
 
@@ -88,9 +88,9 @@ export const Contact = () => {
 
   const addToRefs = (el) => {
     if (el && !entriesRef.current.includes(el)) {
-        entriesRef.current.push(el)
+      entriesRef.current.push(el)
     }
-}
+  }
 
   return (
     <>
@@ -100,7 +100,7 @@ export const Contact = () => {
           <div className="leftContainer">
             <div className="picContainer">
               <div className="myPic">
-                  <img src="src/assets/mypic.jpg" alt="mypic" />
+                <img src="src/assets/mypic.jpg" alt="mypic" />
               </div>
             </div>
             <div className="contactInfo">
@@ -114,16 +114,24 @@ export const Contact = () => {
               </div>
               <div className="social">
                 <div className="insta media" ref={addToRefs}>
-                  <img src="src/assets/instagram.png" alt="insta" />
+                  <a href="https://www.instagram.com/_corevibes/?hl=en">
+                    <img src="src/assets/instagram.png" alt="insta" />
+                  </a>
                 </div>
                 <div className="linked media" ref={addToRefs}>
-                  <img src="src/assets/linkedin.png" alt="linkedin" />
+                  <a href="www.linkedin.com/in/deyishita">
+                    <img src="src/assets/linkedin.png" alt="linkedin" />
+                  </a>
                 </div>
                 <div className="git media" ref={addToRefs}>
-                  <img src="src/assets/git-icon.png" alt="github" />
+                  <a href="https://github.com/Is-hitaDey">
+                    <img src="src/assets/git-icon.png" alt="github" />
+                  </a>
                 </div>
                 <div className="twitter media" ref={addToRefs}>
-                  <img src="src/assets/twitter.png" alt="twitter" />
+                  <a href="https://x.com/222Ishitadey">
+                    <img src="src/assets/twitter.png" alt="twitter" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -133,55 +141,55 @@ export const Contact = () => {
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="username">Name</label>
-                  <input 
-                    type="text" 
-                    name="username" 
-                    id="username" 
+                  <input
+                    type="text"
+                    name="username"
+                    id="username"
                     value={formData.username}
                     onChange={handleChange}
                     placeholder="Enter your name"
                     required
                   />
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="email">Email</label>
-                  <input 
-                    type="email" 
-                    name="email" 
-                    id="email" 
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Enter your email"
                     required
                   />
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="subject">Subject</label>
-                  <input 
-                    type="text" 
-                    name="subject" 
-                    id="subject" 
+                  <input
+                    type="text"
+                    name="subject"
+                    id="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="Enter subject"
                   />
                 </div>
-                
+
                 <div className="form-group">
                   <label htmlFor="message">Message</label>
-                  <textarea 
-                    name="message" 
-                    id="message" 
-                    rows="5" 
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="5"
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Write your message here..."
                     required
                   ></textarea>
                 </div>
-                
+
                 <button type="submit" className="submit-btn">Send Message</button>
               </form>
             </div>
