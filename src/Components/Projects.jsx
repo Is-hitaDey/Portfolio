@@ -1,16 +1,14 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 export const Projects = () => {
     gsap.registerPlugin(ScrollTrigger)
 
     useGSAP(() => {
-        // Calculate the total width of all projects
         const totalWidth = document.querySelector('.projectContainer').scrollWidth;
         
-        // Set height of the container to accommodate the horizontal scroll
         const scrollDistance = totalWidth - window.innerWidth;
         document.querySelector('.projectsWrapper').style.height = `${scrollDistance + window.innerHeight}px`;
         
@@ -23,8 +21,8 @@ export const Projects = () => {
                 end: "bottom bottom",
                 scrub: 2,
                 pin: ".page5",
-                anticipatePin: 1, // For smoother pinning
-                pinSpacing: true, // Important for maintaining scroll space
+                anticipatePin: 1,
+                pinSpacing: true, 
             },
         });
 

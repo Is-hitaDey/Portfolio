@@ -3,10 +3,10 @@ import React from 'react'
 import { Hero } from './components/Hero'
 import { About } from './components/About'
 import { Skills } from './components/Skills'
-import { Cursor } from './Components/Cursor.jsx'
-import { Education } from './Components/Education.jsx'
+import { Cursor } from './components/Cursor.jsx'
+import { Education } from './components/Education.jsx'
 import { Projects } from './components/Projects'
-import { Contact } from './Components/Contact.jsx'
+import { Contact } from './components/Contact.jsx'
 
 
 function App() {

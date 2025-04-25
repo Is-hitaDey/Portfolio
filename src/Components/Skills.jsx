@@ -3,11 +3,10 @@ import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-// Register ScrollTrigger plugin
+
 gsap.registerPlugin(ScrollTrigger);
 
 export const Skills = () => {
-    // Refs for animations
     const skillsContainerRef = useRef(null);
     const skillsHeadingRef = useRef(null);
     const categoriesRef = useRef(null);
@@ -51,7 +50,6 @@ export const Skills = () => {
                     skillsHeadingRef.current.appendChild(line);
                 }
                 
-                // Animate the line (whether it's new or existing)
                 gsap.to(line, {
                     width: '80%',
                     duration: 1.2,
@@ -72,7 +70,6 @@ export const Skills = () => {
             }
         });
 
-        // Categories container animation
         ScrollTrigger.create({
             trigger: categoriesRef.current,
             start: "top 85%",
@@ -87,7 +84,7 @@ export const Skills = () => {
             }
         });
 
-        // Category boxes staggered animation
+        
         categoryRefs.current.forEach((category, index) => {
             ScrollTrigger.create({
                 trigger: category,
@@ -106,7 +103,7 @@ export const Skills = () => {
             });
         });
 
-        // Category headings animation
+       
         langHeadingRefs.current.forEach((heading, index) => {
             ScrollTrigger.create({
                 trigger: heading,
@@ -125,7 +122,7 @@ export const Skills = () => {
             });
         });
 
-        // Language items staggered animation
+       
         langItemsRefs.current.forEach((item, index) => {
             ScrollTrigger.create({
                 trigger: item,
@@ -136,7 +133,6 @@ export const Skills = () => {
                     // Calculate stagger delay based on row and column
                     const staggerDelay = 0.05 * index;
                     
-                    // Animate icon and text
                     gsap.to(item, {
                         opacity: 1,
                         scale: 1,
@@ -163,7 +159,6 @@ export const Skills = () => {
                 }
             });
             
-            // Add hover effect for each language item
             item.addEventListener('mouseenter', () => {
                 gsap.to(item, {
                     scale: 1.1,
@@ -181,7 +176,7 @@ export const Skills = () => {
             item.addEventListener('mouseleave', () => {
                 gsap.to(item, {
                     scale: 1,
-                    boxShadow: "none", // Remove box-shadow
+                    boxShadow: "none", 
                     duration: 0.3,
                     ease: "power2.out"
                 });
@@ -193,7 +188,7 @@ export const Skills = () => {
             });
         });
 
-        // Background color reveal animation
+       
         gsap.set(skillsContainerRef.current, {
             backgroundColor: "rgba(18, 18, 18, 0)"
         });

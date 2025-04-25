@@ -3,16 +3,13 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 export const Education = () => {
-    // Register ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger)
     
-    // Create refs for animation targets
+    gsap.registerPlugin(ScrollTrigger)
     const pageRef = useRef(null)
     const headingRef = useRef(null)
     const entriesRef = useRef([])
     
     useEffect(() => {
-        // Main heading animation
         gsap.fromTo(
             headingRef.current,
             { opacity: 0, y: -50 },
@@ -50,14 +47,11 @@ export const Education = () => {
             )
         }
         
-        // Animation for second qualification - falling from the position of first qualification
         if (entriesRef.current[1]) {
-            // Create a scroll trigger that activates after the first animation
             ScrollTrigger.create({
                 trigger: entriesRef.current[0],
                 start: "top 60%",
                 onEnter: () => {
-                    // Delay the second animation to create sequential effect
                     gsap.fromTo(
                         entriesRef.current[1],
                         { 
@@ -68,8 +62,8 @@ export const Education = () => {
                             opacity: 1, 
                             y: 0, 
                             duration: 1.5,
-                            ease: "bounce.out", // Add a bounce effect for a more natural fall
-                            delay: 0.3 // Small delay after first animation
+                            ease: "bounce.out", 
+                            delay: 0.3 
                         }
                     )
                 },
@@ -77,7 +71,7 @@ export const Education = () => {
             })
         }
 
-        // Add hover effects to qualifications
+
         entriesRef.current.forEach((entry) => {
             if (entry) {
                 const hoverAnimation = gsap.to(entry, {
@@ -98,7 +92,6 @@ export const Education = () => {
         }
     }, [])
     
-    // Function to add elements to refs array
     const addToRefs = (el) => {
         if (el && !entriesRef.current.includes(el)) {
             entriesRef.current.push(el)
